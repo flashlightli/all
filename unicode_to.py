@@ -18,20 +18,25 @@ print(type(dd))
 
 f = open('information.txt')
 line = f.readline()
-line1 = line.strip(',')
-a = eval(line)
-print(type(a))
-line2 = f.readline()
-print("=====", type(line2))
-bb = line2[:-2]
-#print(bb)
-line3 = f.readline()
-print("=====", type(line3))
-cc = line3[:-2]
-dd = eval(cc)
-collection_set01.save(dd)
-print(type(dd))
-# while line:
-#     c = ast.literal_eval(line.decode('utf-8'))
-#     print(c)
-#     line = f.readline()
+# line1 = line.strip(',')
+# # a = eval(line)
+# # print(type(a))
+# # line2 = f.readline()
+# # print("=====", type(line2))
+# # bb = line2[:-2]
+# # #print(bb)
+# # line3 = f.readline()
+# # print("=====", type(line3))
+# #
+# # print(type(dd))
+
+while line:
+    try:
+        cc = line[:-2]
+        dd = eval(cc)
+        print(dd)
+        collection_set01.save(dd)
+        line = f.readline()
+
+    except Exception as err:
+        line = f.readline()
