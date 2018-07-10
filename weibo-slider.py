@@ -41,4 +41,4 @@ while 1 == 1:
                                "time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
             two = collection_set01.update({"content": name[0][13:][:-13]}, one)
     time.sleep(600)
-    aaa
+    aaabbb
